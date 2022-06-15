@@ -1,0 +1,35 @@
+<%- include('layouts/main.ejs'); %>
+
+
+<div class="container">
+    <div class="row">
+        <% proveedores.forEach(function(proveedor){ %>
+        <div class="col col-lg-4"> 
+           
+                <div class="card col-md-4 p-4" style="width: 18rem;">
+                    <div class="card-body">
+                    <p class="card-text">
+                            <%= proveedor.nombre%>
+
+                    </p>
+                    </div>
+                    <div class="card-footer">
+                        <ul type="A">
+                            <li>Número: <%= proveedor.numero %></li>
+                            <li>Dirección: <%= proveedor.direccion %></li>
+                            <li>Descripción: <%= proveedor.descripcion %></li>
+                        </ul>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="/editarproveedor/<%= proveedor._id %>" class="btn btn-warning">Editar</a>
+                        <a href="/eliminarproveedor/<%= proveedor._id %>" class="btn btn-danger">Eliminar</a>
+                      </div>
+                </div>    
+
+        </div>
+        <%}); %>
+    </div>
+</div>
+
+
+<%- include('layouts/footer.ejs'); %>

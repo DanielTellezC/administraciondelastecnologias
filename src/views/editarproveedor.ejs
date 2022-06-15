@@ -1,0 +1,28 @@
+<%- include('layouts/main.ejs'); %>
+
+<div class="form-control">
+    <form action="/editarproveedorn/ <%= proveedores._id %>" method="post">
+      <legend>Edita a: <%= proveedores.nombre %></legend>
+      
+      <div class="mb-3">
+        <label class="form-label">Nombre del proveedor</label>
+        <input name="nombre" type="text" class="form-control" placeholder="Carlos Pérez" value="<%= proveedores.nombre %>">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Número del proveedor</label>
+        <input name="numero" type="text" class="form-control" placeholder="445-546-..." value="<%= proveedores.numero %>">
+      </div>
+      
+      <div class="mb-3">
+        <label class="form-label">Dirección del proveedor</label>
+        <input name="direccion" type="text" class="form-control" placeholder="Avenida García #88" value="<%= proveedores.direccion %>">
+      </div>
+    
+
+      <button type="submit" class="btn btn-primary">Agregar</button>
+   
+    </form>
+</div>
+
+<%- include('layouts/footer.ejs'); %>

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.titulo{
+    font-family: 'Dancing Script', cursive;
+  }
+  
+.bg-cafe{
+    background-color: #92470a;
+}
+  
+
+.imagen_navbar{
+    width: 25%;
+}

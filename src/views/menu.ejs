@@ -1,0 +1,36 @@
+<%- include('layouts/main.ejs'); %>
+<div class="form-control">
+    <form action="/menu" method="post">
+      <legend>Ingresa una opción nueva de café</legend>
+      
+      <div class="mb-3">
+        <label class="form-label">Nombre del café</label>
+        <input name="nombrecafe" type="text" class="form-control" placeholder="Nombre del café">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Tipo de grano</label>
+        <input name="tipograno" type="text" class="form-control" placeholder="Criollo, Caturra, Catimor">
+      </div>
+      
+      <div class="mb-3">
+        <label class="form-label">Origen</label>
+        <input name="origen" type="text" class="form-control" placeholder="Grano colombiano, basileño, nacional...">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Café frio o caliente</label>
+        <input name="temperatura" type="text" class="form-control" placeholder="Frío ó caliente">
+      </div>
+        
+      <div class="mb-3">
+        <label class="form-label">Ingredientes del café</label>
+        <input name="ingredientes" type="text" class="form-control" placeholder="Con crema, con nuez, con vergamota">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+   
+    </form>
+</div>
+<%- include('layouts/footer.ejs') %>
+    

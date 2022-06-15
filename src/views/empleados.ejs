@@ -1,0 +1,36 @@
+<%- include('layouts/main.ejs'); %>
+<div class="container form-control mt-4 pt-4">
+    <form action="/empleados_entrada" method="post">
+        <h4>registrar hora de llegada presionando el botón verde</h4>  
+        <button class="btn btn-success" type="submit">hora de Entrada</button>
+    </form>
+    
+
+</div>
+
+<div class="container form-control mt-4 pt-4">
+    <form action="/empleados_salida" method="post">
+        <h4>Registrar la hora de salida</h4>
+        <button class="btn btn-danger" type="submit">Hora de salida</button>
+    </form>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-6">
+            <% empleadosEnN.forEach(function(empleadoentrada){ %>
+                <div class="container pt-4 pb-4">
+                    <h5>Hora de entrada: <%= empleadoentrada.fecha %></h5>
+                </div>
+            <%});%>
+        </div>
+        <div class="col col-lg-6">
+            <% empleadosSaN.forEach(function(empleadosalida){ %>
+                <div class="container pt-4 pb-4">
+                    <h5>Hora de entrada: <%= empleadosalida.fecha %></h5>
+                </div>
+            <%});%>
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer.ejs'); %>

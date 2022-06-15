@@ -1,0 +1,21 @@
+<%- include('layouts/main.ejs'); %>
+<div class="container pt-4">
+  <p style="text-align: justify;">Para el reconocimiento de la tela, favor de ingresar los datos que se te piden, 
+  así podemos controlar de manera más precisa los movimientos que se hacen dentro de la empresa.</p>
+  <p>Los resultados se veran reflejados en el inventario</p>
+</div>
+   <div class="container">
+      <form action="/profile" method="post">
+        <h5>Ingrese el color</h5>
+        <input class="form-control" type="text" name="color" required>
+        <h5>Ingrese los metros</h5>
+        <input class="form-control" type="text" name="metros" required>
+        <h5>Ingrese el tipo de tela</h5>
+        <input class="form-control" type="text" name="tipodetela" required>
+        
+        <button class="btn btn-success mt-4 mb-4" type="submit">insertar</button>
+      </form>
+    </div>
+  
+<%- include('layouts/footer.ejs') %>
+    

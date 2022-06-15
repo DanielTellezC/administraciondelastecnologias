@@ -1,0 +1,29 @@
+<%- include('layouts/main.ejs'); %>
+
+<div class="container pt-4 text-justifi" style="text-align: justify;">
+    <h2>Buzón de quejas</h2>
+</div>
+<div class="container pt-4">
+    <h5>Nuevo proveedor</h5>
+    <form action="./postearqueja" method="post">
+        <textarea class="form-control" name="comentario" id="" cols="110"  rows="10"></textarea>
+
+        <br>
+        <button class="btn btn-primary text-center" type="submit">guardar bitacora</button>
+    </form>
+</div>
+<hr color = "blue" size = 3>
+<div class="container pt-4">
+    <h5>Quejas hechas</h5>
+    <% quejas.forEach(function(buzon){ %>
+    <p>
+        
+            <%= buzon.comentario %>
+        
+    </p>
+    <hr color = "blue" size = 3>
+    <% }); %>
+</div>
+
+
+<%- include('layouts/footer.ejs') %>

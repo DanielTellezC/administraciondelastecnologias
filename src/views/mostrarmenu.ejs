@@ -1,0 +1,41 @@
+<%- include('layouts/main.ejs'); %>
+
+
+<div class="container">
+    <div class="row">
+        <% menus.forEach(function(menu){ %>
+        <div class="col col-lg-4"> 
+           
+                <div class="card col-md-4 p-4" style="width: 18rem;">
+                    <div class="card-body">
+                    <p class="card-text">
+                            <%= menu.nombrecafe%>
+
+                    </p>
+                    </div>
+                    <div class="card-footer">
+                        <ul type="A">
+                            <li>Tipo de grano: <%= menu.tipograno %></li>
+                            <li>Origen del grano: <%= menu.origen %></li>
+                            <li>Temperatura del café <%= menu.temperatura %></li>
+                            <li>Ingredientes del café preparado: <%= menu.ingredientes %></li>
+                        </ul>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="/editarmenu/<%= menu._id %>" class="btn btn-warning">Editar</a>
+                        <a href="/eliminar/<%= menu._id %>" class="btn btn-danger">Eliminar</a>
+                      </div>
+                </div>    
+
+        </div>
+        <%}); %>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('layouts/footer.ejs') %>
+    

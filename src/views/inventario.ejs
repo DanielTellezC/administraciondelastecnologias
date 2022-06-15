@@ -1,0 +1,36 @@
+<%- include('layouts/main.ejs'); %>
+
+<div class="container">
+    <div class="row">
+        <% rollo.forEach(function(rollos){ %>
+        <div class="col col-lg-4"> 
+           
+                <div class="card col-md-4 p-4" style="width: 18rem;">
+                    <div class="card-body">
+                    <p class="card-text">
+                        <ul type="A">
+                            <%= rollos.img%>
+                            <li>Color: <%= rollos.color %></li>
+                            <li>Tipo de tela: <%= rollos.tipodetela %></li>
+                            <li>Metros <%= rollos.metros %></li>
+                        </ul>
+                        
+                    
+                    </p>
+                    </div>
+                    <div class="card-footer">
+                        <%= rollos.fecha %>
+                    </div>
+                </div>    
+
+        </div>
+        <%}); %>
+    </div>
+</div>
+
+
+
+
+    
+
+<%- include('layouts/footer.ejs'); %>
